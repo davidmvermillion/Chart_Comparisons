@@ -13,5 +13,6 @@ b2 = X\Series_2;
 % b2 = 48.852244897959189 -0.120480192076831x
 lm2 = X*b2;
 plot(Labels, lm1, 'b', Labels, lm2, 'r')
-legend({'Series 1', 'Series 2', 'y = 0.34x + 38.23', 'y = -0.12x + 48.85'}, 'Location', 'best')
+legend({'Series 1', 'Series 2', 'y = 0.34x + 38.23', 'y = -0.12x + 48.85')
+legend('boxoff')
 hold off
