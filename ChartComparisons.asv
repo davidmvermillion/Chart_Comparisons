@@ -20,11 +20,8 @@
 % histogram
 
 h1 = histogram(Series_1);
+h1.Normalization = 'probability'
 h1.BinWidth = 15;
 hold on
-xlabel('Data Value'), ylabel('Frequency'), title('Randomized Data Points')
 h2 = histogram(Series_2);
-h2.BinWidth = 15;
-legend('Series 1', 'Series 2')
-legend('boxoff')
 hold off
