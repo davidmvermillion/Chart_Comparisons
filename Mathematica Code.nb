@@ -1,0 +1,683 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26959,        675]
+NotebookOptionsPosition[     25642,        643]
+NotebookOutlinePosition[     25985,        658]
+CellTagsIndexPosition[     25942,        655]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<C:\\Users\\david\\Documents\\GitHub\\Chart_Comparisons\\Seeded_\
+Values_for_Comparison_Project.csv\>\"", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Data\>\"", ",", " ", "All", ",", " ", "2"}], "}"}]}], 
+    "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.807202135876919*^9, 3.8072021677710648`*^9}, {
+  3.807202209495759*^9, 3.8072022253712945`*^9}, {3.8072022669814644`*^9, 
+  3.807202279605575*^9}, {3.8072023498880444`*^9, 3.807202351475627*^9}, {
+  3.8072024262045093`*^9, 3.8072024946878*^9}, {3.8072026684544063`*^9, 
+  3.8072026691120768`*^9}, {3.807204573610177*^9, 3.8072045738952465`*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellLabel->"In[58]:=",ExpressionUUID->"1d745982-a4e0-4591-9d26-b3dc26945d81"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "37", ",", "7", ",", "26", ",", "27", ",", "91", ",", "77", ",", "58", ",", 
+   "87", ",", "58", ",", "13", ",", "62", ",", "91", ",", "18", ",", "18", 
+   ",", "23", ",", "61", ",", "90", ",", "26", ",", "2", ",", "54", ",", "27",
+    ",", "30", ",", "52", ",", "39", ",", "3", ",", "37", ",", "32", ",", 
+   "43", ",", "28", ",", "6", ",", "50", ",", "50", ",", "71", ",", "45", ",",
+    "37", ",", "19", ",", "84", ",", "61", ",", "46", ",", "51", ",", "39", 
+   ",", "95", ",", "16", ",", "27", ",", "28", ",", "89", ",", "54", ",", 
+   "98", ",", "98", ",", "61"}], "}"}]], "Output",
+ CellChangeTimes->{{3.807202314750764*^9, 3.807202353786453*^9}, {
+   3.8072024526225224`*^9, 3.8072024811545887`*^9}, 3.8072026702300177`*^9, 
+   3.807204575151926*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"537d3fa0-750b-4901-87d8-902861702e5b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"B", " ", "=", " ", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+   "\"\<C:\\Users\\david\\Documents\\GitHub\\Chart_Comparisons\\Seeded_Values_\
+for_Comparison_Project.csv\>\"", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Data\>\"", ",", " ", "All", ",", " ", "3"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.807203290674327*^9, 3.8072032950439034`*^9}, {
+  3.8072045800748158`*^9, 3.8072045879451065`*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellLabel->"In[60]:=",ExpressionUUID->"fae12cdb-eb7d-4aaa-a084-2cef316a77e4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "25", ",", "88", ",", "65", ",", "5", ",", "28", ",", "51", ",", "29", ",", 
+   "83", ",", "10", ",", "98", ",", "52", ",", "26", ",", "68", ",", "64", 
+   ",", "3", ",", "6", ",", "39", ",", "53", ",", "96", ",", "15", ",", "40", 
+   ",", "24", ",", "65", ",", "27", ",", "84", ",", "13", ",", "83", ",", 
+   "43", ",", "14", ",", "65", ",", "76", ",", "95", ",", "15", ",", "100", 
+   ",", "5", ",", "62", ",", "92", ",", "58", ",", "10", ",", "32", ",", "9", 
+   ",", "83", ",", "41", ",", "99", ",", "46", ",", "32", ",", "19", ",", "1",
+    ",", "13", ",", "39"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.80720329599747*^9, {3.8072045818386173`*^9, 3.807204588810014*^9}},
+ CellLabel->"Out[60]=",ExpressionUUID->"9d899bad-ea9c-4cbf-a351-2dcdfb8103b4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", 
+   RowBox[{
+    RowBox[{"ListPlot", "[", 
+     RowBox[{"A", ",", " ", 
+      RowBox[{"PlotMarkers", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Automatic", ",", " ", "Medium"}], "}"}]}], ",", " ", 
+      RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}], ",", " ", 
+    RowBox[{"ListPlot", "[", 
+     RowBox[{"B", ",", " ", 
+      RowBox[{"PlotMarkers", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"Automatic", ",", " ", "Medium"}], "}"}]}], ",", " ", 
+      RowBox[{"PlotStyle", "\[Rule]", "Blue"}]}], "]"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"HoldForm", "[", "Datapoint", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{"Datapoint", " ", "Value"}], "]"}]}], "}"}]}], ",", 
+    RowBox[{"PlotLabel", "\[Rule]", 
+     RowBox[{"RawBoxes", "[", 
+      RowBox[{"RowBox", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"RowBox", "[", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Randomized\>\"", ",", "\"\< \>\"", ",", "\"\<Data\>\"", ",", 
+            "\"\< \>\"", ",", "\"\<Points\>\""}], "}"}], "]"}], ",", 
+         "\"\<,\>\"", ",", "\"\< \>\"", ",", 
+         RowBox[{"RowBox", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Series\>\"", ",", "\"\< \>\"", ",", "\"\<1\>\""}], 
+           "}"}], "]"}]}], "}"}], "]"}], "]"}]}], ",", 
+    RowBox[{"LabelStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"GrayLevel", "[", "0", "]"}], "}"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8072058194666767`*^9, 3.8072058358525*^9}, {
+  3.807205937814417*^9, 3.8072059815146446`*^9}, {3.807206019369193*^9, 
+  3.807206019947229*^9}, {3.8072060846364813`*^9, 3.807206100060608*^9}, {
+  3.807206531921698*^9, 3.8072065500511885`*^9}, {3.8072069324788933`*^9, 
+  3.807206942960988*^9}},
+ CellLabel->"In[95]:=",ExpressionUUID->"d53f57a2-9f33-4e9c-8d22-f09898fafedc"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {
+     {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+      1.6], GeometricTransformationBox[InsetBox[
+        FormBox[
+         StyleBox[
+          GraphicsBox[
+           {EdgeForm[None], DiskBox[{0, 0}]}],
+          StripOnInput->False,
+          GraphicsBoxOptions->{DefaultBaseStyle->Directive[
+            PointSize[0.011000000000000001`], 
+            AbsoluteThickness[1.6], 
+            RGBColor[1, 0, 0]]}],
+         TraditionalForm], {0., 0.}, Automatic, Offset[10]], CompressedData["
+1:eJxdkctOwkAYhQfcsGTBwgULMYQQYwy2iChoB6z3UCJGZU3i2leYR+sj+Qg2
+9DuT+DeZfDlnpv+1t/vZfB8455LqNKrTdPp+sz3C0mPALmzBa9iGM9ipWX6i
+D2v6dxNnBY94/4E+Nvd9eAIHcA2HJp/eJfDU6DN4CUc1Q4E+Ryue/lO/KdRc
+xvAVXkDNYwJvTd4XOCXfHfoKmjnHfSiuh3Pu79E3//2Ylz24DD6bOOiALt/w
+F/gPUFr1iKnxtU/60nxjn48wx1f+3Lyjr/ILX32yN0ddmovqjP2Tx7PPoLza
+1xP+Fhod51L4PzJvQoo=
+       "]]}, {
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}}, {{}, {}}}, {{}, {
+     {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+      1.6], GeometricTransformationBox[InsetBox[
+        FormBox[
+         StyleBox[
+          GraphicsBox[
+           {EdgeForm[None], DiskBox[{0, 0}]}],
+          StripOnInput->False,
+          GraphicsBoxOptions->{DefaultBaseStyle->Directive[
+            PointSize[0.011000000000000001`], 
+            AbsoluteThickness[1.6], 
+            RGBColor[0, 0, 1]]}],
+         TraditionalForm], {0., 0.}, Automatic, Offset[10]], CompressedData["
+1:eJxd0slqQjEUxvFT3XTpwkUXLqxIESmlatUODungCOJs7bbQdV8hj9ZH6iMo
+5P8FboTLj+/mcpJz4vX37+Ynb2bN83NxfnKm3/8w+OR4gQe8DLoVuYDFxB5e
+Bf2MXMI+loN/O3IFq1n9kXyDc6zhM9Zxjbeo895l+7D77DmtwX7v5CZZ+7VQ
+53lI6rbxAzv4iN1gnJ/ev6Dmvse0L76L82LOfkTWXNX3INlviFt01Pukjkv6
+ecUv1pV1z2+4ZF2ZeqY5LlhX1v1qTuzrlStIX+pXfcbvxqxzH55sk0TVV9Y9
+TpH/vVfWvGfx3Cc/vD+u
+       "]]}, {
+      {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}, {
+      {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["Datapoint", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox[
+      RowBox[{"Datapoint", " ", "Value"}], HoldForm], TraditionalForm]},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  LabelStyle->{
+    GrayLevel[0]},
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->RowBox[{
+     RowBox[{"Randomized", " ", "Data", " ", "Points"}], ",", " ", 
+     RowBox[{"Series", " ", "1"}]}],
+  PlotRange->{{0., 50.}, {0, 98.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.807205836508832*^9, {3.8072059556396294`*^9, 3.8072059829824467`*^9}, 
+   3.8072060222918077`*^9, {3.8072060931170273`*^9, 3.807206103357483*^9}, 
+   3.80720655498703*^9},
+ CellLabel->"Out[95]=",ExpressionUUID->"7d3ed01c-bd18-4031-808c-8f47339e6f86"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%96", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.807206586380374*^9, 3.8072065935016947`*^9}},
+ NumberMarks->False,
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"fe37f782-6232-444e-bda9-e4878b7600a6"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {
+     {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+      1.6], GeometricTransformationBox[InsetBox[
+        FormBox[
+         StyleBox[
+          GraphicsBox[
+           {EdgeForm[None], DiskBox[{0, 0}]}],
+          StripOnInput->False,
+          GraphicsBoxOptions->{DefaultBaseStyle->Directive[
+            PointSize[0.011000000000000001`], 
+            AbsoluteThickness[1.6], 
+            RGBColor[1, 0, 0]]}],
+         TraditionalForm], {0., 0.}, Automatic, Offset[10]], CompressedData["
+1:eJxdkctOwkAYhQfcsGTBwgULMYQQYwy2iChoB6z3UCJGZU3i2leYR+sj+Qg2
+9DuT+DeZfDlnpv+1t/vZfB8455LqNKrTdPp+sz3C0mPALmzBa9iGM9ipWX6i
+D2v6dxNnBY94/4E+Nvd9eAIHcA2HJp/eJfDU6DN4CUc1Q4E+Ryue/lO/KdRc
+xvAVXkDNYwJvTd4XOCXfHfoKmjnHfSiuh3Pu79E3//2Ylz24DD6bOOiALt/w
+F/gPUFr1iKnxtU/60nxjn48wx1f+3Lyjr/ILX32yN0ddmovqjP2Tx7PPoLza
+1xP+Fhod51L4PzJvQoo=
+       "]]}, {
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}, {
+      {RGBColor[1, 0, 0], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}}, {{}, {}}}, {{}, {
+     {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+      1.6], GeometricTransformationBox[InsetBox[
+        FormBox[
+         StyleBox[
+          GraphicsBox[
+           {EdgeForm[None], DiskBox[{0, 0}]}],
+          StripOnInput->False,
+          GraphicsBoxOptions->{DefaultBaseStyle->Directive[
+            PointSize[0.011000000000000001`], 
+            AbsoluteThickness[1.6], 
+            RGBColor[0, 0, 1]]}],
+         TraditionalForm], {0., 0.}, Automatic, Offset[10]], CompressedData["
+1:eJxd0slqQjEUxvFT3XTpwkUXLqxIESmlatUODungCOJs7bbQdV8hj9ZH6iMo
+5P8FboTLj+/mcpJz4vX37+Ynb2bN83NxfnKm3/8w+OR4gQe8DLoVuYDFxB5e
+Bf2MXMI+loN/O3IFq1n9kXyDc6zhM9Zxjbeo895l+7D77DmtwX7v5CZZ+7VQ
+53lI6rbxAzv4iN1gnJ/ev6Dmvse0L76L82LOfkTWXNX3INlviFt01Pukjkv6
+ecUv1pV1z2+4ZF2ZeqY5LlhX1v1qTuzrlStIX+pXfcbvxqxzH55sk0TVV9Y9
+TpH/vVfWvGfx3Cc/vD+u
+       "]]}, {
+      {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}, {
+      {RGBColor[0, 0, 1], PointSize[0.011000000000000001`], AbsoluteThickness[
+       1.6]}, {}}}, {{}, {}}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox[
+     TagBox["Datapoint", HoldForm], TraditionalForm], 
+    FormBox[
+     TagBox[
+      RowBox[{"Datapoint", " ", "Value"}], HoldForm], TraditionalForm]},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->Full,
+  LabelStyle->{
+    GrayLevel[0]},
+  Method->{
+   "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotLabel->RowBox[{
+     RowBox[{"Randomized", " ", "Data", " ", "Points"}], ",", " ", 
+     RowBox[{"Series", " ", "1"}]}],
+  PlotRange->{{0., 50.}, {0, 98.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.80720658017343*^9, 3.8072066024047265`*^9}},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"cc17310c-6b49-4cdc-a530-8d48dc742a0c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "ImageSize"}]], "Input",
+ CellChangeTimes->{{3.8072069606469555`*^9, 3.8072069642990294`*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"7ad0887c-a080-4dc7-82b0-b829f2a97963"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {4., 9.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/ImageSize",
+              ButtonNote->"paclet:ref/ImageSize"],
+             "\"paclet:ref/ImageSize\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"ImageSize is an option that specifies the overall \
+size of an image to display for an object. \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   
+                   TemplateBox[{
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/ImageSize", 
+                    "paclet:ref/ImageSize", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"],"\"  \"",StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False],
+                    "\"  \"",TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/ImageSize.\
+html"], None}, "http://reference.wolfram.com/language/ref/ImageSize.html", 
+                    "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`ImageSize\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {4., 9.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/ImageSize",
+              ButtonNote->"paclet:ref/ImageSize"],
+             "\"paclet:ref/ImageSize\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"ImageSize is an option that specifies the overall \
+size of an image to display for an object. \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {2., 8.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "ImageSize is an option that specifies the overall size of an image to \
+display for an object. ", "Documentation" -> 
+    Association[
+     "Local" -> "paclet:ref/ImageSize", "Web" -> 
+      "http://reference.wolfram.com/language/ref/ImageSize.html"], 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {Protected}, 
+    "FullName" -> "System`ImageSize"], False]]], "Output",
+ CellChangeTimes->{3.807206965316925*^9},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"ce8860e3-c5e3-4995-bbf1-76998ebec340"]
+}, Open  ]]
+},
+WindowSize->{759, 697},
+WindowMargins->{{Automatic, 380}, {24, Automatic}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 837, 16, 105, "Input",ExpressionUUID->"1d745982-a4e0-4591-9d26-b3dc26945d81"],
+Cell[1420, 40, 879, 14, 52, "Output",ExpressionUUID->"537d3fa0-750b-4901-87d8-902861702e5b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2336, 59, 548, 12, 86, "Input",ExpressionUUID->"fae12cdb-eb7d-4aaa-a084-2cef316a77e4"],
+Cell[2887, 73, 800, 13, 52, "Output",ExpressionUUID->"9d899bad-ea9c-4cbf-a351-2dcdfb8103b4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3724, 91, 1952, 46, 143, "Input",ExpressionUUID->"d53f57a2-9f33-4e9c-8d22-f09898fafedc"],
+Cell[5679, 139, 3721, 92, 233, "Output",ExpressionUUID->"7d3ed01c-bd18-4031-808c-8f47339e6f86"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9437, 236, 295, 7, 28, "Input",ExpressionUUID->"fe37f782-6232-444e-bda9-e4878b7600a6"],
+Cell[9735, 245, 3615, 91, 409, "Output",ExpressionUUID->"cc17310c-6b49-4cdc-a530-8d48dc742a0c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13387, 341, 205, 4, 28, "Input",ExpressionUUID->"7ad0887c-a080-4dc7-82b0-b829f2a97963"],
+Cell[13595, 347, 12031, 293, 204, "Output",ExpressionUUID->"ce8860e3-c5e3-4995-bbf1-76998ebec340"]
+}, Open  ]]
+}
+]
+*)
+
