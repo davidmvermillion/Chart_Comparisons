@@ -5,6 +5,8 @@ library('tidyverse')
 # Import CSV as tibble
 a <- read_csv("C:/Users/david/Documents/GitHub/Chart_Comparisons/Seeded_Values_for_Comparison_Project.csv", col_names = FALSE)
 
+# rename(a, X1=)
+
 # Scatterplot
 ggplot(data = a) +
-  geom_point(mapping = aes(x = x1, y = x2))
+  geom_point(mapping = aes(x = X1, y = X2), color = 'blue')
