@@ -28,3 +28,30 @@ a %>% pivot_longer(-Datapoint) %>%
   geom_smooth(method = lm, se = FALSE) +                                                                          # Linear fit
   labs(title = 'Randomized Data Points', xlab = 'Datapoint', ylab = 'Datapoint Value') +                          # Labels
   stat_poly_eq(formula = my.formula, aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), parse = TRUE)   # Equation for linear fit
+
+# Histogram
+a %>% pivot_longer(-Datapoint) %>%
+  ggplot(aes(x = Datapoint, y = value, color = name, group = name)) +
+  geom_histogram(binwidth = 15)
+
+ggplot(a, aes(x = value, color = column_to_rownames())) +
+  geom_histogram(fill = "white", binwidth = 15)
+
+
+
+set.seed(1234)
+df <- data.frame(
+  sex=factor(rep(c("F", "M"), each=200)),
+  weight=round(c(rnorm(200, mean=55, sd=5), rnorm(200, mean=65, sd=5)))
+)
+head(df)
+
+ggplot(df, aes(x=weight, color=sex)) +
+  geom_histogram(fill="white")
+
+ggplot(df, aes(x=weight, color=sex)) +
+  geom_histogram(fill="white", alpha=0.5, position="identity")
+
+ggplot(df, aes(x=weight, color=sex)) +
+  geom_histogram(fill="white", position="dodge")+
+  theme(legend.position="top")
